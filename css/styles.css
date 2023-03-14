@@ -21,7 +21,6 @@
 
 body {
   background-color: #010101;
-  color: #fff;
   font-family: raleway, sans-serif;
   line-height: 1.55;
 }
@@ -71,19 +70,21 @@ body {
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
   will-change: transform;
   font-weight: 900;
-  margin-bottom: calc(var(--index) * 15);
+  margin-bottom: calc(var(--index) * 5);
+  color: #faf6df;
+  text-shadow: 0 0 15px #eec736;
 }
 
 .layers_caption {
   font-size: calc(var(--index) * 5);
   letter-spacing: calc(var(--index) * 0.7);
-  line-height: calc(var(--index) * 6);
+  line-height: calc(var(--index) * 8);
 }
 
 .layers_title {
   font-size: calc(var(--index) * 2.5);
   letter-spacing: calc(var(--index) / 1.7);
-  line-height: calc(var(--index) * 5);
+  line-height: calc(var(--index) * 8);
 }
 
 .bridge {
