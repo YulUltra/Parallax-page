@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "raleway";
+  src: url("/fonts/raleway-black.woff2");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "raleway";
+  src: url("/fonts/raleway-regular.woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+}
+
+body {
+  background-color: #010101;
+  color: #fff;
+  font-family: raleway, sans-serif;
+  line-height: 1.55;
+}
+
+.layers {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
+
+.layers_base {
+  background-image: url("/images/layer-base.png");
+}
+
+. layers_middle {
+  background-image: url("../images/layer-middle.png");
+}
+
+. layers_front {
+  background-image: url("../images/layer-front.png");
+}
+
+.main-header {
+  position: relative;
+}
+
+.main-article {
+  background-image: url("../images/2nd-page-background.png");
+}
