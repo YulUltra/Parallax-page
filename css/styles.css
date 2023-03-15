@@ -18,7 +18,7 @@
 :root {
   --index: calc(1vw+1vh);
   --text-color: #faf6df;
-  --transition: transform 0.75s ease;
+  --transition: transform 0.75s cubic-bezier(0.07, 0.5, 0, 1);
 }
 
 body {
@@ -50,12 +50,14 @@ body {
 .layers_base {
   background-image: url("/images/layer-base.png");
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  transition: var(--transition);
   z-index: 1;
 }
 
 .layers_middle {
   background-image: url("../images/layer-middle.png");
   transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  transition: var(--transition);
   z-index: 1;
 }
 
@@ -65,12 +67,14 @@ body {
   background-size: 100%;
   margin-top: calc(var(--index) * 39);
   transform: translate3d(0, calc(var(--scrollTop) / 3.5), 0);
+  transition: var(--transition);
   z-index: 3;
 }
 
 .layer_header {
   z-index: 2;
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  transition: var(--transition);
   will-change: transform;
   font-weight: 900;
   margin-bottom: calc(var(--index) * 5);
@@ -126,7 +130,9 @@ body {
   font-size: calc(var(--index) * 1.7);
   transform: var(--main-article-transform);
 }
-
+.content {
+  will-change: transform;
+}
 .copy {
   position: absolute;
   bottom: calc(var(--index) * 2);
