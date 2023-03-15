@@ -18,6 +18,7 @@
 :root {
   --index: calc(1vw+1vh);
   --text-color: #faf6df;
+  --transition: transform 0.75s ease;
 }
 
 body {
@@ -43,6 +44,7 @@ body {
   background-size: cover;
   background-position: center;
   will-change: transform;
+  transition: var(--transition);
 }
 
 .layers_base {
@@ -61,7 +63,7 @@ body {
   background-image: url("../images/layer-front.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-top: 45%;
+  margin-top: calc(var(--index) * 39);
   transform: translate3d(0, calc(var(--scrollTop) / 3.5), 0);
   z-index: 3;
 }
